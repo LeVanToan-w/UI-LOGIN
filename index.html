@@ -32,6 +32,14 @@
         <input type="password" id="password" placeholder="Input password.....">
         <button id="bttn" onclick="login()">Login</button>
     </div>
-    <script src="script.js"></script>
+    <div class="lightmouse"></div>
+    <script>
+        const gradient = document.querySelector('.lightmouse');
+        document.addEventListener('mousemove', e => {
+        gradient.style.background = `
+        radial-gradient(circle at ${e.clientX}px ${e.clientY}px,
+        rgba(0,255,255,0.2), transparent 60%)`;
+});
+    </script>
 </body>
 </html>
