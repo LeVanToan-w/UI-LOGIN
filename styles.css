@@ -173,6 +173,9 @@ body {
     top: 290px;
     border-radius: 15px;
 }
+#bttn:hover {
+    background-color: green;
+}
 .lightmouse {
     position: fixed;
     width: 100vw;
@@ -180,4 +183,24 @@ body {
     background: radial-gradient(circle at center, rgba(0,255,255,0.2), transparent 60%);
     pointer-events: none;
     transition: background-position 0.1s;
+}
+.wooden {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  background: rgba(0,255,255,0.15);
+  color: #0ff;
+  padding: 10px 20px;
+  border: 1px solid #0ff;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+#password:active + .wooden {
+    opacity: 1;
+    transform: translate(-50%, -60%);
+    pointer-events: auto;
 }
